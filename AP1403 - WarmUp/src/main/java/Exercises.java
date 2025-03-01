@@ -21,9 +21,9 @@ public class Exercises {
         }
         return -1;
     }
-    
+
     public char[][] generateTriangle(int n) {
-        char[][] triangle = new char[n][]; // Jagged array instead of fixed [n][n]
+        char[][] triangle = new char[n][]; 
 
         for (int i = 0; i < n; i++) {
             triangle[i] = new char[i + 1];
