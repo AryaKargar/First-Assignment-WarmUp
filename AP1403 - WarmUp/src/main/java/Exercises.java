@@ -10,30 +10,32 @@ public class Exercises {
     }
 
     public long fibonacciIndex(long n) {
+        long a = 0, b = 1 ,c ;
+        long counter = 0;
+        while(counter < n){
+            c = a + b;
+            a = b;
+            b = c;
+            counter ++;
+            if(n == a) return counter;
+        }
         return -1;
     }
-
-    /*
-        you should create a triangle with "*" and return a two-dimensional array of characters based on that
-        the triangle's area is empty, which means some characters should be " "
-
-        example 1, input = 3:
-        *
-        **
-        ***
-
-        example 2, input = 5:
-        *
-        **
-        * *
-        *  *
-        *****
-
-        the output has to be a two-dimensional array of characters, so don't just print the triangle!
-     */
+    
     public char[][] generateTriangle(int n) {
-        // todo
-        return null;
+        char[][] triangle = new char[n][]; // Jagged array instead of fixed [n][n]
+
+        for (int i = 0; i < n; i++) {
+            triangle[i] = new char[i + 1];
+            for (int j = 0; j <= i; j++) {
+                if (j == 0 || j == i || i == n - 1) {
+                    triangle[i][j] = '*';
+                } else {
+                    triangle[i][j] = ' ';
+                }
+            }
+        }
+        return triangle;
     }
 
     public static void main(String[] args) {
