@@ -1,21 +1,15 @@
 public class Exercises {
 
-    /*
-        complete this function to check if the input number is prime or not
-     */
     public boolean isPrime(long n) {
-        // todo
-        return false;
+        if(n == 2) return true;
+        if(n < 2) return false;
+        for(int i = 2; i <= Math.sqrt(n); i++) {
+            if(n % i == 0) return false;
+        }
+        return true;
     }
 
-    /*
-        implement an algorithm to find out the index of input number in a fibonacci sequence starting from 0, 1
-        e.g. 0, 1, 1, 2, 3, 5, ...
-        indices start from 0, e.g. 3 is the index 4 of this sequence
-        if the input is not a fibonacci number with description above, return -1
-     */
     public long fibonacciIndex(long n) {
-        // todo
         return -1;
     }
 
